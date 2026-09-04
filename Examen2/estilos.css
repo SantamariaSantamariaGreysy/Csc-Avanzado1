@@ -1,0 +1,100 @@
+.container{
+    /*la letra*/
+    font-family:  Arial,sans-serif;
+    /*Se olrganiza toda la estructura en grid,permitiendo organizar en filas y columnas*/
+    display: grid;
+    /* formamos 2 columnas verticales*/
+    grid-template-columns:  20vh 1fr ;
+    /*Formamos 3 filas horizontales*/
+    grid-template-rows: 10vh 1fr 10vh;
+    /* Contenido Principal en la celda*/
+    grid-template-areas:
+                     "header header"
+                     "sidebar main"
+                     "footer footer";
+    gap: 10px;
+}
+header{
+    grid-area: header;
+    background-color: #a860caa8;
+    padding: 10px;
+    
+}
+
+aside{
+    grid-area: sidebar;
+    background-color: #e67070b9;
+    padding: 10px;
+}
+main{
+    grid-area: main;
+    background-color:#ec4f8371;;
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+    background-color: #cb45e6b7;
+    padding: 10px;
+}
+/*contendor de productos*/
+.catalog-grid{
+    background-color: #cc387193;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+/*contenedor*/
+.featured-banner{
+    /*expandimos el banner para que ocupe las dos columnas y dos filas*/
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: #eb87c9;  
+    margin:20px;
+    text-align: center;
+}
+.product-card{
+     /*ya no expandimos pq solo debe utilizar una celda, eso es automáticamente 
+    por las columnas definimos en el contenedor principal de productos*/
+    background-color: #ad539286;
+    margin: 10px;
+    padding: 8px;
+   font-size: 10px;
+}
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(222, 153, 170);
+    padding:8px;
+    flex-direction: row;
+}
+.botones{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                        "header"
+                        "main"
+                        "sidebar"
+                        "footer"
+   }
+   .toolbar{
+    flex-direction: column;
+    gap: 10px;
+   }
+   .catalog-grid{
+    grid-template-columns: 1fr;
+   }
+   .featured-banner{
+    grid-column: span 1;
+    grid-row: span auto;
+   }
+
+}
+
