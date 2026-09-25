@@ -1,0 +1,38 @@
+$header: green;
+$nav: cyan;
+$aside: red;
+$section: blue;
+$footer:blue;
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 200px auto 50px;
+    grid-template-areas:
+        "header header header"
+        "aside section section"
+        "footer footer footer";
+
+}
+
+header {
+    grid-area: header;
+    background-color: $header;
+}
+
+nav {
+    display: inline-block;
+}
+
+aside {
+    grid-area: aside;
+
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: $footer;
+}
+
