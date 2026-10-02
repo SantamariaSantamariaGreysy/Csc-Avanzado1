@@ -1,0 +1,10 @@
+.tarjeta-clara {
+  background-color: #f5f5f5;
+  padding: 10px 20px;
+  color: black;
+}
+.tarjeta-oscura {
+  background-color: #212121;
+  padding: 10px 20px;
+  color: white;
+}

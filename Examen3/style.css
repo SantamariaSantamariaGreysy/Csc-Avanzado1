@@ -1,0 +1,39 @@
+.alerta-4 {
+  background-color: #cc8512;
+  font-size: 30px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+  border: 10px solid #250705;
+  font-weight: bold;
+  color: #141414;
+}
+.alerta-3 {
+  background-color: #eb9c1b;
+  font-size: 26px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+.alerta-2 {
+  background-color: #eeac41;
+  font-size: 22px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+.alerta-1 {
+  background-color: #f2bd66;
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}

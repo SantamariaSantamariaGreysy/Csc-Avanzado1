@@ -1,0 +1,17 @@
+// Mixin recursivo para generar las tarjetas
+.generar-tarjetas(@n) when (@n > 0) {
+  .card-@{n} {
+    font-size: 1rem * @n;
+    
+    box-shadow: 0px 5px (5px * @n) rgba(172, 12, 12, 0.3);
+    
+    // Estilos para la tarjeta
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  .generar-tarjetas(@n - 1);
+}
+.generar-tarjetas(3);

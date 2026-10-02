@@ -1,0 +1,9 @@
+.tarjeta-smart(@bg) {
+  background-color: @bg;
+  padding: 10px 20px;
+  & when (lightness(@bg) > 50%) { color: black; }
+  & when (lightness(@bg) <= 50%) { color: white; }
+}
+.tarjeta-clara {.tarjeta-smart(#f5f5f5);}
+
+.tarjeta-oscura { .tarjeta-smart(#212121);}

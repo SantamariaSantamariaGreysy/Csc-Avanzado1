@@ -1,0 +1,30 @@
+//variable base
+@color-base: #f5cd8c;
+@fuente-base: 14px;
+@color-acento: #141414;
+
+// Mixin con Pensamiento Recursivo y Lógica Funcional
+.generar-alertas(@n) when (@n > 0) {
+  
+  .alerta-@{n} {
+    background-color: darken(@color-base, @n * 8%);
+    font-size: @fuente-base + (@n * 4);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: darken(@color-acento, 10%);
+
+    & when (@n = 4) {
+      border: 10px solid #250705;
+      font-weight: bold;
+      color: #141414;
+    }
+  }
+
+  // se llama a sí mismo con un valor menor
+  .generar-alertas(@n - 1);
+}
+
+// Ejecución del algoritmo para generar 4 niveles
+.generar-alertas(4);
